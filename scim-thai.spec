@@ -1,5 +1,5 @@
 %define version 0.1.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define scim_version       1.4.5
 %define libthai_version  0.0.4
@@ -30,6 +30,7 @@ scim-thai is a Thai IMEngine for SCIM.
 Summary:	Scim-thai library
 Group:		System/Internationalization
 Provides:	%{libname_orig} = %{version}-%{release}
+Requires:	%name = %{version}-%{release}
 
 %description -n %{libname}
 scim-thai library.
