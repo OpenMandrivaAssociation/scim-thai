@@ -19,9 +19,9 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 Requires:		%{libname} = %{version}
 Requires:		scim >= %{scim_version}
 BuildRequires:		scim-devel >= %{scim_version}
-BuildRequires:		libthai-devel >= %{libthai_version}
+BuildRequires:		thai-devel >= %{libthai_version}
 BuildRequires:		gettext-devel
-BuildRequires:		automake1.9
+BuildRequires:		automake
 
 %description
 scim-thai is a Thai IMEngine for SCIM.
