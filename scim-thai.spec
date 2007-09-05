@@ -8,12 +8,12 @@
 %define libname %mklibname %{name} 0
 
 Name:		scim-thai
-Summary:	Scim-thai is a Hangul IMEngine for SCIM
+Summary:	Scim-thai is a Thai IMEngine for SCIM
 Version:	%{version}
 Release:	%{release}
 Group:		System/Internationalization
 License:	GPL
-URL:		http://sourceforge.net/projects/scim/
+URL:		http://linux.thai.net/projects/scim-thai
 Source0:	%{name}-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 Requires:		%{libname} = %{version}
@@ -24,22 +24,12 @@ BuildRequires:		gettext-devel
 BuildRequires:		automake1.9
 
 %description
-scim-thai is a Hangul IMEngine for SCIM.
-
-
-%package common
-Summary:	Common files for scim-thai library
-Group:		System/Internationalization
-Provides:	%{libname_orig} = %{version}-%{release}
-
-%description common
-Common files for scim-thai library.
+scim-thai is a Thai IMEngine for SCIM.
 
 %package -n %{libname}
 Summary:	Scim-thai library
 Group:		System/Internationalization
 Provides:	%{libname_orig} = %{version}-%{release}
-Requires:	scim-thai-common
 
 %description -n %{libname}
 scim-thai library.
@@ -65,8 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %post -n %{libname} -p /sbin/ldconfig
 %postun -n %{libname} -p /sbin/ldconfig
 
-
-%files common -f %{name}.lang
+%files -f %{name}.lang
 %defattr(-,root,root)
 %doc AUTHORS COPYING
 %{_datadir}/scim/icons/*
