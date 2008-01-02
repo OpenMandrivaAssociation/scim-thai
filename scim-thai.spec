@@ -15,6 +15,7 @@ Group:		System/Internationalization
 License:	GPL
 URL:		http://linux.thai.net/projects/scim-thai
 Source0:	ftp://linux.thai.net/pub/ThaiLinux/software/libthai/%{name}-%{version}.tar.gz
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 Requires:		%{libname} = %{version}
 Requires:		scim >= %{scim_version}
 BuildRequires:		scim-devel >= %{scim_version}
