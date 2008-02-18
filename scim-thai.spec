@@ -1,5 +1,5 @@
 %define version 0.1.0
-%define release %mkrel 2
+%define release %mkrel 3
 
 %define scim_version       1.4.5
 %define libthai_version  0.0.4
