@@ -8,7 +8,7 @@
 %define libname %mklibname %{name} 0
 
 Name:		scim-thai
-Summary:	Scim-thai is a Thai IMEngine for SCIM
+Summary:	Thai IMEngine for SCIM
 Version:	%{version}
 Release:	%{release}
 Group:		System/Internationalization
