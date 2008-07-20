@@ -1,5 +1,5 @@
 %define version 0.1.1
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define scim_version       1.4.5
 %define libthai_version  0.0.4
@@ -16,7 +16,6 @@ License:	GPL
 URL:		http://linux.thai.net/projects/scim-thai
 Source0:	ftp://linux.thai.net/pub/ThaiLinux/software/libthai/%{name}-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
-Requires:		%{libname} = %{version}
 Requires:		scim-client = %{scim_api}
 BuildRequires:		scim-devel >= %{scim_version}
 BuildRequires:		thai-devel >= %{libthai_version}
