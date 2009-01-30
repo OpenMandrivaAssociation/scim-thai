@@ -1,5 +1,5 @@
 %define version 0.1.1
-%define release %mkrel 2
+%define release %mkrel 3
 
 %define scim_version       1.4.5
 %define libthai_version  0.0.4
@@ -15,6 +15,7 @@ Group:		System/Internationalization
 License:	GPL
 URL:		http://linux.thai.net/projects/scim-thai
 Source0:	ftp://linux.thai.net/pub/ThaiLinux/software/libthai/%{name}-%{version}.tar.gz
+Patch0:		scim-thai-0.1.1-linkage.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 Requires:		scim-client = %{scim_api}
 BuildRequires:		scim-devel >= %{scim_version}
@@ -28,6 +29,7 @@ scim-thai is a Thai IMEngine for SCIM.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 [[ ! -x configure ]] && ./bootstrap
@@ -40,6 +42,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %find_lang %{name}
 
+rm -f %buildroot%{_libdir}/scim-1.0/*/*/*.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -47,7 +51,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc AUTHORS COPYING
 %{_datadir}/scim/icons/*
-%{_libdir}/scim-1.0/*/IMEngine/*.la
 %{_libdir}/scim-1.0/*/IMEngine/*.so
-%{_libdir}/scim-1.0/*/SetupUI/*.la
 %{_libdir}/scim-1.0/*/SetupUI/*.so
