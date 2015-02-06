@@ -1,7 +1,7 @@
 Name:		scim-thai
 Summary:	Thai IMEngine for SCIM
 Version:	0.1.3
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Internationalization
 Url:		http://linux.thai.net/projects/scim-thai
