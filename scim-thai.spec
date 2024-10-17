@@ -4,7 +4,7 @@ Version:	0.1.3
 Release:	2
 License:	GPLv2+
 Group:		System/Internationalization
-Url:		http://linux.thai.net/projects/scim-thai
+Url:		https://linux.thai.net/projects/scim-thai
 Source0:	ftp://linux.thai.net/pub/ThaiLinux/software/libthai/%{name}-%{version}.tar.gz
 BuildRequires:	gettext-devel
 BuildRequires:	pkgconfig(libthai)
