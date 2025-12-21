@@ -6,6 +6,11 @@ License:	GPLv2+
 Group:		System/Internationalization
 Url:		https://linux.thai.net/projects/scim-thai
 Source0:	ftp://linux.thai.net/pub/ThaiLinux/software/libthai/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gettext-devel
 BuildRequires:	pkgconfig(libthai)
 BuildRequires:	pkgconfig(scim)
